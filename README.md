@@ -12,6 +12,7 @@ brew tap rabbitmq/tap
 
  * [`rabbitmqadmin` v2](https://www.rabbitmq.com/docs/management-cli): a RabbitMQ CLI that targets the HTTP API
  * [`fshc`](https://github.com/rabbitmq/fshc/): file and socket handle counter
+ * [`rabbitmq-lqt`](https://github.com/michaelklishin/rabbitmq-lqt): RabbitMQ log file querying tools
 
 ## License
 
