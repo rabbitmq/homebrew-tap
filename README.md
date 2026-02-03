@@ -10,7 +10,7 @@ brew tap rabbitmq/tap
 
 ## Formulas
 
- * [`rabbitmqadmin`](https://www.rabbitmq.com/docs/management-cli): modern RabbitMQ CLI based on the HTTP API
+ * [`rabbitmqadmin` v2](https://www.rabbitmq.com/docs/management-cli): a RabbitMQ CLI that targets the HTTP API
  * [`fshc`](https://github.com/rabbitmq/fshc/): file and socket handle counter
 
 ## License
