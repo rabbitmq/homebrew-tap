@@ -23,24 +23,24 @@
 class RabbitmqLqt < Formula
   desc "CLI tool for parsing, annotating, and querying RabbitMQ log files"
   homepage "https://github.com/michaelklishin/rabbitmq-lqt"
-  version "0.19.0"
+  version "0.21.0"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     on_arm do
-      url "https://github.com/michaelklishin/rabbitmq-lqt/releases/download/v0.19.0/rabbitmq-lqt-0.19.0-aarch64-apple-darwin.tar.gz"
-      sha256 "27299206992d8924fe39fa282f5967b40af1a19d42a5dd3bbf1c4ed9430112cb"
+      url "https://github.com/michaelklishin/rabbitmq-lqt/releases/download/v0.21.0/rabbitmq-lqt-0.21.0-aarch64-apple-darwin.tar.gz"
+      sha256 "411a15b4a757ae9e8500889d39c8e6dba61b8e66cd2fe5584a3359113c01332f"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/michaelklishin/rabbitmq-lqt/releases/download/v0.19.0/rabbitmq-lqt-0.19.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "227710cf05921983b0230b3dd2b9d8cd3587a8e7a2cae14bc25bf3f93a9839a8"
+      url "https://github.com/michaelklishin/rabbitmq-lqt/releases/download/v0.21.0/rabbitmq-lqt-0.21.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "200ece7df7ad286732c29e424d3cee267fd31f8effc4d940a24439e6c6eecf2a"
     end
     on_intel do
-      url "https://github.com/michaelklishin/rabbitmq-lqt/releases/download/v0.19.0/rabbitmq-lqt-0.19.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "ffb419e97f0aa6fae479581eb1a534330a10254c690f28f5892fd630e7104faf"
+      url "https://github.com/michaelklishin/rabbitmq-lqt/releases/download/v0.21.0/rabbitmq-lqt-0.21.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "89961227bc2dc68c1f7e4f2197dc869643c1283ef5f0e10706ec2ac5179588f6"
     end
   end
 

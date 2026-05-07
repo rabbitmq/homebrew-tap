@@ -23,24 +23,24 @@
 class Rabbitmqadmin < Formula
   desc "Modern RabbitMQ CLI based on the HTTP API"
   homepage "https://www.rabbitmq.com/docs/management-cli"
-  version "2.29.0"
+  version "2.30.0"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     on_arm do
-      url "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v2.29.0/rabbitmqadmin-2.29.0-aarch64-apple-darwin.tar.gz"
-      sha256 "9b5fa47f72d775e1ff6473f4be00258c07be3ec18035deea4d7d91b615a4e888"
+      url "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v2.30.0/rabbitmqadmin-2.30.0-aarch64-apple-darwin.tar.gz"
+      sha256 "d296da68ab88809f23549fc94229c650f0394736efaaf3d4b31598e9e94b443f"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v2.29.0/rabbitmqadmin-2.29.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "2fe6528be65a66bc15a1fc54f8388238e0e6751b3d678052b3259143bc481350"
+      url "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v2.30.0/rabbitmqadmin-2.30.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "cb4f4a745688f88cd82119e8796c62ccd1131f7fe260e5bbc77e881cab6793ec"
     end
     on_intel do
-      url "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v2.29.0/rabbitmqadmin-2.29.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a5ab11aabd228dca1551018e6c561177634988045037c8515326107f596d7b61"
+      url "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v2.30.0/rabbitmqadmin-2.30.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "9f0ef0ce02ef33afb33e9d2896fa78d91e63d5a2fcc597c3997303740c4d1ab0"
     end
   end
 
