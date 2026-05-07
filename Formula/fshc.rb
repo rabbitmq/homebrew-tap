@@ -23,24 +23,24 @@
 class Fshc < Formula
   desc "File and socket handle counter, a modern alternative to handle.exe"
   homepage "https://github.com/rabbitmq/fshc"
-  version "1.4.0"
+  version "1.5.0"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     on_arm do
-      url "https://github.com/rabbitmq/fshc/releases/download/v1.4.0/fshc-1.4.0-aarch64-apple-darwin.tar.gz"
-      sha256 "73809745aaa7c35af084d7ecd1885376c46bb6389a5d06a1407718b1c62bcde9"
+      url "https://github.com/rabbitmq/fshc/releases/download/v1.5.0/fshc-1.5.0-aarch64-apple-darwin.tar.gz"
+      sha256 "2a5ed110ff5c32ff90919ed05feeffc3669d6f5ad3ce3131095ded2b2bb79104"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/rabbitmq/fshc/releases/download/v1.4.0/fshc-1.4.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "3751ec3d82589b1fa2eab9d3c3760be049ef593f43e9e9d65348d61c874bc672"
+      url "https://github.com/rabbitmq/fshc/releases/download/v1.5.0/fshc-1.5.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "08c30ac855a4bbc8c8bd1e1a816f5e26b67241c4101d34eb35a5165dfa4eacc7"
     end
     on_intel do
-      url "https://github.com/rabbitmq/fshc/releases/download/v1.4.0/fshc-1.4.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "ed3ba226836cb9e78710aee32325cde0f571a26047d199d6ffa7268a58a3dd77"
+      url "https://github.com/rabbitmq/fshc/releases/download/v1.5.0/fshc-1.5.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "8ede1677a894bea6d6cbc565f8bd31672afe1a07dde763f7671026ed880ad91a"
     end
   end
 
