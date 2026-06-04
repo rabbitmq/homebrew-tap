@@ -23,38 +23,37 @@
 class RabbitmqLqt < Formula
   desc "CLI tool for parsing, annotating, and querying RabbitMQ log files"
   homepage "https://github.com/michaelklishin/rabbitmq-lqt"
-  version "0.21.0"
+  url "https://github.com/michaelklishin/rabbitmq-lqt/archive/refs/tags/v0.22.0.tar.gz"
+  sha256 "981466a82ce08e9b56b5ec4f90088db1ce4740370da1b8daf2d3d708dc157c3f"
   license any_of: ["Apache-2.0", "MIT"]
-
-  url "https://github.com/michaelklishin/rabbitmq-lqt/archive/refs/tags/v0.21.0.tar.gz"
-  sha256 "1fc777f4a542a9456f329f5acdd1c5aeab08e3bb2c10669b90498c2bb58cc94c"
 
   depends_on "rust" => :build
 
   on_macos do
     on_arm do
-      url "https://github.com/michaelklishin/rabbitmq-lqt/releases/download/v0.21.0/rabbitmq-lqt-0.21.0-aarch64-apple-darwin.tar.gz"
-      sha256 "411a15b4a757ae9e8500889d39c8e6dba61b8e66cd2fe5584a3359113c01332f"
+      url "https://github.com/michaelklishin/rabbitmq-lqt/releases/download/v0.22.0/rabbitmq-lqt-0.22.0-aarch64-apple-darwin.tar.gz"
+      sha256 "3fdf13e97a60455b3d2d3307cbd4d2f412f485d875193db7827f17defc3d6047"
     end
     on_intel do
-      url "https://github.com/michaelklishin/rabbitmq-lqt/archive/refs/tags/v0.21.0.tar.gz"
-      sha256 "1fc777f4a542a9456f329f5acdd1c5aeab08e3bb2c10669b90498c2bb58cc94c"
+      url "https://github.com/michaelklishin/rabbitmq-lqt/archive/refs/tags/v0.22.0.tar.gz"
+      sha256 "981466a82ce08e9b56b5ec4f90088db1ce4740370da1b8daf2d3d708dc157c3f"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/michaelklishin/rabbitmq-lqt/releases/download/v0.21.0/rabbitmq-lqt-0.21.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "200ece7df7ad286732c29e424d3cee267fd31f8effc4d940a24439e6c6eecf2a"
+      url "https://github.com/michaelklishin/rabbitmq-lqt/releases/download/v0.22.0/rabbitmq-lqt-0.22.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "f88f4d78ed7d9d74b08dcd61357af920b93511bcdc60b6534647a7e993d74ab4"
     end
     on_intel do
-      url "https://github.com/michaelklishin/rabbitmq-lqt/releases/download/v0.21.0/rabbitmq-lqt-0.21.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "89961227bc2dc68c1f7e4f2197dc869643c1283ef5f0e10706ec2ac5179588f6"
+      url "https://github.com/michaelklishin/rabbitmq-lqt/releases/download/v0.22.0/rabbitmq-lqt-0.22.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "ab6df06970754c3c3603306c634f59878c1486e5d4f056507123799a07f10839"
     end
   end
 
   def pour_bottle?
     return false if OS.mac? && Hardware::CPU.intel?
+
     super
   end
 
@@ -67,6 +66,6 @@ class RabbitmqLqt < Formula
   end
 
   test do
-    system "#{bin}/rabbitmq-lqt", "--version"
+    system bin/"rabbitmq-lqt", "--version"
   end
 end
