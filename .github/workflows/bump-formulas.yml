@@ -1,0 +1,67 @@
+name: Bump formulas
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    outputs:
+      formulas: ${{ steps.list.outputs.formulas }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - id: list
+        run: |
+          formulas=$(find Formula -name '*.rb' -exec basename {} .rb \; | sort | jq -Rsc 'split("\n") | map(select(length > 0))')
+          echo "formulas=${formulas}" >> "$GITHUB_OUTPUT"
+
+  bump:
+    needs: list
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        formula: ${{ fromJSON(needs.list.outputs.formulas) }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+      FORMULA: ${{ matrix.formula }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - id: bump
+        run: .github/scripts/bump-formula.sh "$FORMULA"
+
+      - name: Open pull request
+        if: steps.bump.outputs.updated == 'true'
+        env:
+          REPO: ${{ steps.bump.outputs.repo }}
+          CURRENT: ${{ steps.bump.outputs.current }}
+          LATEST: ${{ steps.bump.outputs.latest }}
+          BASE: ${{ github.event.repository.default_branch }}
+        run: |
+          branch="bump/${FORMULA}-${LATEST}"
+          if git ls-remote --exit-code --heads origin "$branch" > /dev/null; then
+            echo "Branch ${branch} already exists, skipping"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git commit -am "Bump ${FORMULA} to \`${LATEST}\`"
+          git push origin "$branch"
+
+          gh pr create \
+            --base "$BASE" \
+            --head "$branch" \
+            --title "Bump ${FORMULA} to \`${LATEST}\`" \
+            --body "Updates \`${FORMULA}\` from \`${CURRENT}\` to \`${LATEST}\`.
+
+          Release notes: https://github.com/${REPO}/releases/tag/v${LATEST}"
