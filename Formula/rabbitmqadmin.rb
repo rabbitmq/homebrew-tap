@@ -27,19 +27,19 @@ class Rabbitmqadmin < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v2.34.0/rabbitmqadmin-2.34.0-aarch64-apple-darwin.tar.gz"
-      sha256 "8613e20e0d6a84c8e0b0704b30f23cc55204c4883dac8455fccd54dda5e79e1f"
+      url "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v2.35.0/rabbitmqadmin-2.35.0-aarch64-apple-darwin.tar.gz"
+      sha256 "a8d997bda0319b3bdf315eabf82ab7f686a853b1ae2cc0e72aaf6d54e35e3543"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v2.34.0/rabbitmqadmin-2.34.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "ff29b442dd7d233c50d25721d6282ab444f5c24a42aee0680bdf8d7a45c1b2f7"
+      url "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v2.35.0/rabbitmqadmin-2.35.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "89d80871d380222663df6d0c64c585fba434eb584782bf6596e9c6c41821ece7"
     end
     on_intel do
-      url "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v2.34.0/rabbitmqadmin-2.34.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "69771af6135a946d198c986c98d51644970af97f59c895a6ad714f2270f845f1"
+      url "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v2.35.0/rabbitmqadmin-2.35.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "3af75e750f96be6efa3ff45ef9c015cff95b33df6ef3a2df9d235ab66f02ce87"
     end
   end
 
