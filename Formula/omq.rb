@@ -27,23 +27,23 @@ class Omq < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/rabbitmq/omq/releases/download/v0.55.0/omq_0.55.0_darwin_arm64"
-      sha256 "74f189eaca6da9ba503a8d06b35d13b42ba3d6bcabb3ee735be83a2d96139b4b"
+      url "https://github.com/rabbitmq/omq/releases/download/v0.60.1/omq_0.60.1_darwin_arm64"
+      sha256 "0d2d2cdd8e1150a2f88961860b1aa74645ee2ba87f4780e2945d993350a35af4"
     end
     on_intel do
-      url "https://github.com/rabbitmq/omq/releases/download/v0.55.0/omq_0.55.0_darwin_amd64"
-      sha256 "f704c8ff7db97c1bc231f570cda2b50e7e9cbcf367c7523a3f2ea7bfb6273aef"
+      url "https://github.com/rabbitmq/omq/releases/download/v0.60.1/omq_0.60.1_darwin_amd64"
+      sha256 "68c23f94fb4cba50a3781401a25de4604cb42751cb875f7f5eb32a3f4edcd4cf"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/rabbitmq/omq/releases/download/v0.55.0/omq_0.55.0_linux_arm64"
-      sha256 "5bfa168b3d93f1d08fa6c93f3ff8d5ee6c2055860f186927ac177883acd868d0"
+      url "https://github.com/rabbitmq/omq/releases/download/v0.60.1/omq_0.60.1_linux_arm64"
+      sha256 "eb5780469872cf7bcfe53dc87a9fd86fb1a1d5e3ed2965652f7129c35635d154"
     end
     on_intel do
-      url "https://github.com/rabbitmq/omq/releases/download/v0.55.0/omq_0.55.0_linux_amd64"
-      sha256 "daaf731590655f36c72decc64c18858c3814d8857016e3314359a29081d7d3ba"
+      url "https://github.com/rabbitmq/omq/releases/download/v0.60.1/omq_0.60.1_linux_amd64"
+      sha256 "89bfcf91689077b1c30e31876b5c809f3607a0aa9aad27d24a70cc7e14f63318"
     end
   end
 
